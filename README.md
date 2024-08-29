@@ -1,0 +1,1 @@
+To accomplish this, you may choose to use either Promise chaining via then() statements, or use async/await syntax. Either is a valid approach. As an added challenge, attempt to refactor your code into the opposite solution if you have enough time, and save both versions.
