@@ -8,9 +8,10 @@ async function getUserData(id) { //only async function allow to use await
     db3: db3
   };
   //Accordingly, you should test your function using id values between 1 and 10 (inclusive). Use values outside of this range to test for error cases. 
-  if(id>10 || id<1)
-  {console.error('id need to be between 1 to 10')}
-//step1 find users in the database using central
+  if(id>10 ||id<1)
+  {console.error('id need to be a number between 1 to 10')}
+
+  console.log(typeof(id))
   const dataBaseName=await central(id)
   console.log(dataBaseName)
   //const basicInfo= dbs[valueReturnedFromCentral](id)
@@ -28,5 +29,10 @@ async function getUserData(id) { //only async function allow to use await
 }
 
 
+
 const user= await getUserData(5)
 console.log(user)
+const user1= await getUserData(56)
+console.log(user1)
+const user2= await getUserData('sbe')
+console.log(user2)
